@@ -92,13 +92,13 @@ body {
   }
   /* Progress Bar Animation */  
   .skill[data-skill="5"] span {
-    width: 50%;
+    width: 70%;
   }
   .skill[data-skill="3"] span {
-    width: 25%;
+    width: 40%;
   }
   .skill[data-skill="1"] span {
-    width: 5%;
+    width: 30%;
   }
 
 
@@ -109,7 +109,7 @@ body {
   }
 
   .skill[data-skill="7"] span {
-    width: 70%;
+    width: 35%;
   } 
   
   /* Experience Styling */  
