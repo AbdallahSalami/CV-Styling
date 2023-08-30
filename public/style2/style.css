@@ -1,0 +1,225 @@
+
+body {
+    background-color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Hide unnecessary headings */
+h2, #about h3, #contact h3, #contact dt, .contact-skype {
+    display: none;
+}
+
+/* Styling for header */
+hgroup h1 {
+    padding: 30px 0;
+    border-bottom: 1px solid gray;
+}
+
+/* Positioning for image in header */
+figure img {
+    position: absolute;
+    top: 70px;
+    right: 150px;
+    transform: rotate(-15deg);
+    width: 200px;
+    height: 200px;
+}
+
+/* About section */
+#about {
+    font-size: 16px;
+    font-weight: 400;
+    color: gray;
+    width: 60%;
+    line-height: 1.5;
+    margin-bottom: 150px;
+}
+
+/* Skills sections */
+.skills {
+    display: flex;
+    justify-content: start;
+    align-items: baseline;
+    gap: 10px;
+    margin-left: 10px;
+    color: white;
+    width: 100%;
+}
+
+/* Skill blocks */
+.skill {
+    padding: 10px;
+    background-color: #008080;
+    margin: 5px 0;
+    width: 20%;
+}
+
+.skills-primary {
+    font-size: 22px;
+}
+
+/* Skill rating stars */
+.skill span::after {
+    content: "\2605";
+    color: white;
+    width: auto;
+    height: auto;
+    float: right;
+}
+
+/* Different star ratings */
+.skill[data-skill="5"] span::after {
+    content: "\2605 \2605 \2605";
+}
+
+.skill[data-skill="3"] span::after {
+    content: "\2605 \2605";
+}
+
+.skill[data-skill="1"] span::after {
+    content: "\2605";
+}
+
+.skill[data-skill="7"] span::after,
+.skill[data-skill="9"] span::after {
+    content: "\2605 \2605 \2605 \2605 \2605";
+}
+
+/* Experience sections */
+.experience {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+    padding: 0 10px 10px;
+    line-height: 1.5;
+    margin: 0;
+}
+.experience h4{
+    margin-top: 0;
+}
+
+/* Experience details */
+.experience-details {
+    font-size: 15px;
+    font-weight: 400;
+    color: gray;
+}
+
+.experience-type {
+color: #008080;
+}
+
+
+.experience-institution {
+    display: none;
+}
+
+.experience-date-separator {
+    color: #008080;
+}
+
+/* Hobbies and Contact sections */
+section ul {
+    margin: 0;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Contact icons */
+a {
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+
+.contact-email a{
+    content: url(../images/email.png);
+}
+.contact-phone a{
+    content: url(../images/phone.png);
+}
+.contact-github a{
+    content: url(../images/github.png);
+}
+.contact-facebook a{
+    content: url(../images/facebook.png);
+}
+
+#hobbies ul{
+    margin-bottom: 30px;
+}
+
+/* Media queries */
+@media (min-width: 992px) {
+    body {
+        padding: 10px 100px;
+    }
+    
+    section {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        margin-bottom: 50px;
+    }
+
+    section h3 {
+        grid-row: 1 / span 2;
+        width: 130px;
+        margin: 0;
+        border-right: 1px solid black;
+        font-style: italic;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        padding: 10px 20px;
+    }
+    .content {
+        padding-left: 10px;
+    }  
+    
+    section {
+        margin-bottom: 40px;
+    }
+    
+    figure img {
+        display: none;
+    }
+
+    #about {
+        width: 100%;
+    }
+
+    section h3 {
+        width: 130px;
+        border-bottom: 1px solid black;
+        font-style: italic;
+    }
+
+    .skills-secondary {
+        margin-left: 0;
+        font-size: 12px;
+    }
+
+    .skills-primary {
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    .skill {
+        padding: 10px;
+        background-color: #008080;
+        margin: 5px 0;
+        width: 25%;
+    }
+}
